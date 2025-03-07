@@ -3,15 +3,21 @@
 namespace jopanel\Hudsyn;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
+use Illuminate\Routing\Router;
 
 class HudsynServiceProvider extends ServiceProvider
 {
     public function boot()
     {
         // Load routes, views, migrations, etc.
+        $router = $this->app->make(Router::class);
+        // Ensure CSRF middleware is applied to package routes
+        $router->pushMiddlewareToGroup('web', VerifyCsrfToken::class);
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'hudsyn');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        
 
         // Publish views
         $this->publishes([

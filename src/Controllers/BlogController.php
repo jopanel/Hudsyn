@@ -17,7 +17,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::with('author')->get();
-        return view('hudsyn.blog.index', compact('blogs'));
+        return view('hudsyn::hudsyn.blog.index', compact('blogs'));
     }
 
     /**
@@ -26,7 +26,7 @@ class BlogController extends Controller
     public function create()
     {
         $authors = User::all();
-        return view('hudsyn.blog.create', compact('authors'));
+        return view('hudsyn::hudsyn.blog.create', compact('authors'));
     }
 
     /**
@@ -70,7 +70,7 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $authors = User::all();
-        return view('hudsyn.blog.edit', compact('blog', 'authors'));
+        return view('hudsyn::hudsyn.blog.edit', compact('blog', 'authors'));
     }
 
     /**
@@ -136,7 +136,7 @@ class BlogController extends Controller
     protected function generateStaticFile(Blog $blog)
     {
         // Render the public view for the blog post.
-        $html = view('public.blog', compact('blog'))->render();
+        $html = view('hudsyn::public.blog', compact('blog'))->render();
 
         // Define the file path based on the slug.
         $filePath = public_path("static/blog/{$blog->slug}.html");

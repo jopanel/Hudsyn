@@ -13,7 +13,7 @@ class SettingController extends Controller
     public function index()
     {
         $settings = Setting::all();
-        return view('hudsyn.settings.index', compact('settings'));
+        return view('hudsyn::hudsyn.settings.index', compact('settings'));
     }
 
     /**
@@ -21,7 +21,7 @@ class SettingController extends Controller
      */
     public function create()
     {
-        return view('hudsyn.settings.create');
+        return view('hudsyn::hudsyn.settings.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class SettingController extends Controller
     public function edit($id)
     {
         $setting = Setting::findOrFail($id);
-        return view('hudsyn.settings.edit', compact('setting'));
+        return view('hudsyn::hudsyn.settings.edit', compact('setting'));
     }
 
     /**

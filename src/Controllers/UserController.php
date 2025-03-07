@@ -14,7 +14,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('hudsyn.users.index', compact('users'));
+        return view('hudsyn::hudsyn.users.index', compact('users'));
     }
 
     /**
@@ -22,7 +22,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('hudsyn.users.create');
+        return view('hudsyn::hudsyn.users.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('hudsyn.users.edit', compact('user'));
+        return view('hudsyn::hudsyn.users.edit', compact('user'));
     }
 
     /**

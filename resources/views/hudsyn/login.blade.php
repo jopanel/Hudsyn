@@ -18,7 +18,7 @@
         <button type="submit">Login</button>
     </form>
 
-    @if ($errors->any())
+    @if (isset($errors) && $errors->any())
         <div>
             <ul>
                 @foreach ($errors->all() as $error)

@@ -13,7 +13,7 @@ class AuthController extends Controller
     // Display the login form
     public function showLoginForm()
     {
-        return view('hudsyn.login');
+        return view('hudsyn::hudsyn.login');
     }
 
     // Process the login submission
@@ -49,7 +49,7 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('hudsyn.login');
+        return redirect()->route('hudsyn::hudsyn.login');
     }
 
 }

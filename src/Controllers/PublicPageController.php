@@ -30,17 +30,17 @@ class PublicPageController extends Controller
                 case 'page':
                     $content = Page::find($customRoute->content_id);
                     $folder = 'pages';
-                    $viewName = 'public.page';
+                    $viewName = 'hudsyn::public.page';
                     break;
                 case 'blog':
                     $content = Blog::find($customRoute->content_id);
                     $folder = 'blog';
-                    $viewName = 'public.blog';
+                    $viewName = 'hudsyn::public.blog';
                     break;
                 case 'press_release':
                     $content = PressRelease::find($customRoute->content_id);
                     $folder = 'press';
-                    $viewName = 'public.press';
+                    $viewName = 'hudsyn::public.press';
                     break;
                 default:
                     abort(404, 'Content not found.');
@@ -76,7 +76,7 @@ class PublicPageController extends Controller
         if (File::exists($filePath)) {
             return Response::file($filePath);
         }
-        return view('public.page', compact('page'));
+        return view('hudsyn::public.page', compact('page'));
     }
 
     /**
@@ -101,7 +101,7 @@ class PublicPageController extends Controller
             return Response::file($filePath);
         }
 
-        return view('public.blog', compact('blog'));
+        return view('hudsyn::public.blog', compact('blog'));
     }
 
     /**
@@ -126,6 +126,6 @@ class PublicPageController extends Controller
             return Response::file($filePath);
         }
 
-        return view('public.press', compact('press'));
+        return view('hudsyn::public.press', compact('press'));
     }
 }

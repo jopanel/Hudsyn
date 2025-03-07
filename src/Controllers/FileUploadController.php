@@ -15,7 +15,7 @@ class FileUploadController extends Controller
     public function index()
     {
         $files = FileUpload::orderBy('created_at', 'desc')->get();
-        return view('hudsyn.files.index', compact('files'));
+        return view('hudsyn::hudsyn.files.index', compact('files'));
     }
 
     /**
@@ -24,7 +24,7 @@ class FileUploadController extends Controller
      */
     public function create()
     {
-        return view('hudsyn.files.create');
+        return view('hudsyn::hudsyn.files.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class FileUploadController extends Controller
                     ->orderBy('created_at', 'desc')
                     ->get();
 
-        return view('hudsyn.files.gallery', compact('images'));
+        return view('hudsyn::hudsyn.files.gallery', compact('images'));
     }
 
     /**

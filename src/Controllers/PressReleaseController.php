@@ -17,7 +17,7 @@ class PressReleaseController extends Controller
     public function index()
     {
         $pressReleases = PressRelease::with('author')->get();
-        return view('hudsyn.press-releases.index', compact('pressReleases'));
+        return view('hudsyn::hudsyn.press-releases.index', compact('pressReleases'));
     }
 
     /**
@@ -26,7 +26,7 @@ class PressReleaseController extends Controller
     public function create()
     {
         $authors = User::all();
-        return view('hudsyn.press-releases.create', compact('authors'));
+        return view('hudsyn::hudsyn.press-releases.create', compact('authors'));
     }
 
     /**
@@ -132,7 +132,7 @@ class PressReleaseController extends Controller
     protected function generateStaticFile(PressRelease $pressRelease)
     {
         // Render the public view for the press release.
-        $html = view('public.press', compact('pressRelease'))->render();
+        $html = view('hudsyn::public.press', compact('pressRelease'))->render();
 
         // Define the file path based on the slug.
         $filePath = public_path("static/press/{$pressRelease->slug}.html");

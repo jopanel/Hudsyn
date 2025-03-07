@@ -14,16 +14,21 @@ use Jopanel\Hudsyn\Controllers\StaticPublishingController;
 use Jopanel\Hudsyn\Controllers\PublicPageController;
 use Jopanel\Hudsyn\Controllers\FileUploadController;
 use Jopanel\Hudsyn\Middleware\HudsynMiddleware;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
+
 
 // -----------------------
 // Hudsyn Admin Routes
 // -----------------------
 
-Route::group(['prefix' => 'hudsyn'], function () {
-    // Login routes
+Route::group(['prefix' => 'hudsyn', 'middleware' => ['web']], function () {
+    // Show login form
     Route::get('/', [AuthController::class, 'showLoginForm'])->name('hudsyn.login');
+    
+    // Process login form
     Route::post('/', [AuthController::class, 'login'])->name('hudsyn.login.submit');
 });
+
 
 // Fallback for the default "login" route.
 Route::get('/login', function(){
@@ -32,7 +37,7 @@ Route::get('/login', function(){
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Protected admin routes (all prefixed with /hudsyn)
-Route::group(['prefix' => 'hudsyn', 'middleware' => [HudsynMiddleware::class]], function () {
+Route::group(['prefix' => 'hudsyn', 'middleware' => ['web', HudsynMiddleware::class]], function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('hudsyn.dashboard');
     Route::resource('users', UserController::class, ['as' => 'hudsyn']);
     Route::resource('pages', PageController::class, ['as' => 'hudsyn']);

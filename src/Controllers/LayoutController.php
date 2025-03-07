@@ -13,7 +13,7 @@ class LayoutController extends Controller
     public function index()
     {
         $layouts = Layout::all();
-        return view('hudsyn.layouts.index', compact('layouts'));
+        return view('hudsyn::hudsyn.layouts.index', compact('layouts'));
     }
 
     /**
@@ -21,7 +21,7 @@ class LayoutController extends Controller
      */
     public function create()
     {
-        return view('hudsyn.layouts.create');
+        return view('hudsyn::hudsyn.layouts.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class LayoutController extends Controller
     public function edit($id)
     {
         $layout = Layout::findOrFail($id);
-        return view('hudsyn.layouts.edit', compact('layout'));
+        return view('hudsyn::hudsyn.layouts.edit', compact('layout'));
     }
 
     /**

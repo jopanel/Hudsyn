@@ -16,7 +16,7 @@ class PageController extends Controller
     public function index()
     {
         $pages = Page::all();
-        return view('hudsyn.pages.index', compact('pages'));
+        return view('hudsyn::hudsyn.pages.index', compact('pages'));
     }
 
     /**
@@ -24,7 +24,7 @@ class PageController extends Controller
      */
     public function create()
     {
-        return view('hudsyn.pages.create');
+        return view('hudsyn::hudsyn.pages.create');
     }
 
     /**
@@ -81,7 +81,7 @@ class PageController extends Controller
     public function edit($id)
     {
         $page = Page::findOrFail($id);
-        return view('hudsyn.pages.edit', compact('page'));
+        return view('hudsyn::hudsyn.pages.edit', compact('page'));
     }
 
     /**
@@ -162,7 +162,7 @@ class PageController extends Controller
     protected function generateStaticFile(Page $page)
     {
         // Render the public view with the page data.
-        $html = view('public.page', compact('page'))->render();
+        $html = view('hudsyn::public.page', compact('page'))->render();
 
         // Define a filename based on the slug.
         $fileName = $page->slug . '.html';

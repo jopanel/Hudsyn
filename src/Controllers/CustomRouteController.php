@@ -13,7 +13,7 @@ class CustomRouteController extends Controller
     public function index()
     {
         $customRoutes = CustomRoute::all();
-        return view('hudsyn.custom-routes.index', compact('customRoutes'));
+        return view('hudsyn::hudsyn.custom-routes.index', compact('customRoutes'));
     }
 
     /**
@@ -21,7 +21,7 @@ class CustomRouteController extends Controller
      */
     public function create()
     {
-        return view('hudsyn.custom-routes.create');
+        return view('hudsyn::hudsyn.custom-routes.create');
     }
 
     /**
@@ -58,7 +58,7 @@ class CustomRouteController extends Controller
     public function edit($id)
     {
         $customRoute = CustomRoute::findOrFail($id);
-        return view('hudsyn.custom-routes.edit', compact('customRoute'));
+        return view('hudsyn::hudsyn.custom-routes.edit', compact('customRoute'));
     }
 
     /**
