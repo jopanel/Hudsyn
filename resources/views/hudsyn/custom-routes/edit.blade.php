@@ -1,4 +1,4 @@
-@extends('hudsyn.layouts.app')
+@extends('hudsyn::layouts.app')
 
 @section('content')
     <h1>Edit Custom Route</h1>

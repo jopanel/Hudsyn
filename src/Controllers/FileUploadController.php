@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Hudsyn;
-
+namespace Jopanel\Hudsyn\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Hudsyn\FileUpload;
+use Jopanel\Hudsyn\Models\FileUpload;
 use Illuminate\Support\Facades\File; // For file system functions
 use Illuminate\Http\JsonResponse;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Hudsyn;
+namespace Jopanel\Hudsyn\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use App\Hudsyn\User;
+use Jopanel\Hudsyn\Models\User;
 
 class AuthController extends Controller
 {

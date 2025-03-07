@@ -1,19 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Hudsyn\AuthController;
-use App\Http\Controllers\Hudsyn\DashboardController;
-use App\Http\Controllers\Hudsyn\UserController;
-use App\Http\Controllers\Hudsyn\PageController;
-use App\Http\Controllers\Hudsyn\BlogController;
-use App\Http\Controllers\Hudsyn\PressReleaseController;
-use App\Http\Controllers\Hudsyn\CustomRouteController;
-use App\Http\Controllers\Hudsyn\LayoutController;
-use App\Http\Controllers\Hudsyn\SettingController;
-use App\Http\Controllers\Hudsyn\StaticPublishingController;
-use App\Http\Controllers\Hudsyn\PublicPageController;
-use App\Http\Controllers\Hudsyn\FileUploadController;
-use App\Http\Middleware\HudsynMiddleware;
+use Jopanel\Hudsyn\Controllers\AuthController;
+use Jopanel\Hudsyn\Controllers\DashboardController;
+use Jopanel\Hudsyn\Controllers\UserController;
+use Jopanel\Hudsyn\Controllers\PageController;
+use Jopanel\Hudsyn\Controllers\BlogController;
+use Jopanel\Hudsyn\Controllers\PressReleaseController;
+use Jopanel\Hudsyn\Controllers\CustomRouteController;
+use Jopanel\Hudsyn\Controllers\LayoutController;
+use Jopanel\Hudsyn\Controllers\SettingController;
+use Jopanel\Hudsyn\Controllers\StaticPublishingController;
+use Jopanel\Hudsyn\Controllers\PublicPageController;
+use Jopanel\Hudsyn\Controllers\FileUploadController;
+use Jopanel\Hudsyn\Middleware\HudsynMiddleware;
 
 // -----------------------
 // Hudsyn Admin Routes

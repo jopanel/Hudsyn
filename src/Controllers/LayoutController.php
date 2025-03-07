@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Hudsyn;
-
+namespace Jopanel\Hudsyn\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Hudsyn\Layout;
+use Jopanel\Hudsyn\Models\Layout;
 
 class LayoutController extends Controller
 {

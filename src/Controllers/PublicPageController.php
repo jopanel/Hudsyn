@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Hudsyn;
-
+namespace Jopanel\Hudsyn\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Hudsyn\Page;
-use App\Hudsyn\Blog;
-use App\Hudsyn\PressRelease;
-use App\Hudsyn\CustomRoute;
+use Jopanel\Hudsyn\Models\Page;
+use Jopanel\Hudsyn\Models\Blog;
+use Jopanel\Hudsyn\Models\PressRelease;
+use Jopanel\Hudsyn\Models\CustomRoute;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Response;
 

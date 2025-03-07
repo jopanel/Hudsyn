@@ -1,7 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Hudsyn;
-
+namespace Jopanel\Hudsyn\Controllers;
 use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller

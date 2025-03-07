@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Hudsyn;
-
+namespace Jopanel\Hudsyn\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Hudsyn\Blog;
-use App\Hudsyn\User;
+use Jopanel\Hudsyn\Models\Blog;
+use Jopanel\Hudsyn\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;

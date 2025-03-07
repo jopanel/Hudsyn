@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Hudsyn;
+namespace Jopanel\Hudsyn\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
