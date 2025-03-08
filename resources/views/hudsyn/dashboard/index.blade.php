@@ -36,7 +36,7 @@
         </nav>
     </header>
     <div class="container">
-        <h2>Welcome, {{ auth()->user()->name }}</h2>
+        <h2>Welcome, {{ auth('hudsyn')->user()->name }}</h2>
         <p>This is your dashboard. Use the navigation above to manage your content and settings.</p>
         <!-- You can add more dashboard widgets or statistics here -->
     </div>

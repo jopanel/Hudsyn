@@ -53,6 +53,7 @@ composer require jopanel/hudsyn
 Publish Hudsyn’s assets (views, migrations, seeders, and public assets) to your Laravel project using Artisan:
 
 ```bash
+php artisan vendor:publish --tag=hudsyn-config
 php artisan vendor:publish --tag=hudsyn-views
 php artisan vendor:publish --tag=hudsyn-migrations
 php artisan vendor:publish --tag=hudsyn-seeders
