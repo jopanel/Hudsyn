@@ -1,5 +1,5 @@
 
-[screen-capture (3).webm](https://github.com/user-attachments/assets/57dfc82c-ffcd-4dae-bf31-4379bc5acd5d)
+<img width="861" alt="Hudsyn Dashboard" src="https://github.com/user-attachments/assets/d4e83177-320f-4040-8a66-fd62a2c58dad" />
 
 # Hudsyn – A Free Headless CMS for Laravel
 
