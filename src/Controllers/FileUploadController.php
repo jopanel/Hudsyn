@@ -33,7 +33,7 @@ class FileUploadController extends Controller
     public function gallery(Request $request)
     {
         // Get only files that are images
-        $images = \App\Hudsyn\FileUpload::where('mime_type', 'like', 'image/%')
+        $images = FileUpload::where('mime_type', 'like', 'image/%')
                     ->orderBy('created_at', 'desc')
                     ->get();
 
@@ -69,7 +69,7 @@ class FileUploadController extends Controller
         $filePath = $uploadDir . '/' . $fileName;
 
         // Save the file details to the database
-        $file = \App\Hudsyn\FileUpload::create([
+        $file = FileUpload::create([
             'file_name'     => $fileName,
             'original_name' => $originalName,
             'file_path'     => $filePath,
@@ -113,7 +113,7 @@ class FileUploadController extends Controller
             $uploadedFile->move(public_path($uploadDir), $fileName);
             $filePath = $uploadDir . '/' . $fileName;
 
-            \App\Hudsyn\FileUpload::create([
+            FileUpload::create([
                 'file_name'     => $fileName,
                 'original_name' => $originalName,
                 'file_path'     => $filePath,

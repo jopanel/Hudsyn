@@ -3,7 +3,7 @@
 namespace Jopanel\Hudsyn\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Hudsyn\User;
+use Jopanel\Hudsyn\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller

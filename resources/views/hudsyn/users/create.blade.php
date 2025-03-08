@@ -1,4 +1,4 @@
-@extends('hudsyn.layouts.app')
+@extends('hudsyn.hudsyn.layouts.app')
 
 @section('content')
     <h1>Create New User</h1>

@@ -1,4 +1,4 @@
-@extends('hudsyn::layouts.app')
+@extends('hudsyn::hudsyn.layouts.app')
 
 @section('content')
     <h1>Blog Posts</h1>

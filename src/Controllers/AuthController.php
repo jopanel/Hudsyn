@@ -25,15 +25,18 @@ class AuthController extends Controller
             'password' => ['required'],
         ]);
 
-        // Find the user by email
+        // Find the user by email using the Hudsyn model
         $user = User::where('email', $credentials['email'])->first();
 
         // Check if the user exists and the password is correct
         if ($user && Hash::check($credentials['password'], $user->password)) {
-            // Log in the user. (Make sure your auth guard is configured appropriately.)
-            Auth::login($user);
+            // Log in the user using the 'hudsyn' guard
+            Auth::guard('hudsyn')->login($user);
 
-            // Redirect to the dashboard or admin home
+            // Regenerate session to ensure authentication is maintained
+            $request->session()->regenerate();
+
+            // Redirect to the dashboard
             return redirect()->intended('/hudsyn/dashboard');
         }
 
@@ -45,11 +48,12 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-        Auth::logout();
+        Auth::guard('hudsyn')->logout(); // Logout only from the Hudsyn guard
+
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('hudsyn::hudsyn.login');
+        return redirect()->route('hudsyn.login');
     }
 
 }

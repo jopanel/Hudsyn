@@ -26,14 +26,11 @@ class HudsynMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Auth::check()) {
-            // If using a headless API approach, you might return JSON:
-            // return response()->json(['error' => 'Unauthorized'], 401);
-            
-            // Or, if you want to redirect to the custom login page:
+        if (!Auth::guard('hudsyn')->check()) {
             return redirect()->route('hudsyn.login');
         }
 
         return $next($request);
     }
+
 }
