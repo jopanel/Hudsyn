@@ -1,3 +1,6 @@
+
+<img width="861" alt="Hudsyn Dashboard" src="https://github.com/user-attachments/assets/d4e83177-320f-4040-8a66-fd62a2c58dad" />
+
 # Hudsyn – A Free Headless CMS for Laravel
 
 **Hudsyn** is a lightweight, headless content management system designed specifically for Laravel projects. Born from the need to quickly manage a beautiful, fast-loading landing page without the overhead of systems like WordPress or expensive alternatives such as Statamic, Hudsyn allows you to manage pages, blog posts, press releases, custom routes, layouts, settings, and file uploads—all from within your Laravel application.
