@@ -64,8 +64,9 @@
     <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('content', {
+            allowedContent: true,
             filebrowserImageBrowseUrl: '{{ url("hudsyn/files/gallery") }}',
-            filebrowserImageUploadUrl: '{{ url("hudsyn/files/upload-image") }}?_token={{ csrf_token() }}'
+            filebrowserImageUploadUrl: '{{ url("hudsyn/files/upload-image") }}?_token={{ csrf_token() }}',
         });
     </script>
 
