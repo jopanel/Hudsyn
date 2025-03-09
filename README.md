@@ -41,14 +41,14 @@ Hudsyn is a modular CMS that integrates directly into your Laravel project. It p
 
 ## Installation
 
-Hudsyn is packaged as a Composer package for easy integration into your existing Laravel project.
+Hudsyn is packaged as a Composer package for easy integration into your existing Laravel project. *Currently laravel 11+ && PHP8+ is supported*
 
 ### Step 1: Require the Package
 
 Run the following Composer command from your Laravel project root:
 
 ```bash
-composer require jopanel/hudsyn:^1.0.5
+composer require jopanel/hudsyn:^1.0.6
 ```
 
 ### Step 2: Publish the Package Assets
