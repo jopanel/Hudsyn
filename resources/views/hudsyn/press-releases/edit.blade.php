@@ -51,8 +51,22 @@
     <script>
         CKEDITOR.replace('content', {
             allowedContent: true,
+            contentsCss: {!! json_encode(config('hudsyn.editor.contentsCss')) !!},
             filebrowserImageBrowseUrl: '{{ url("hudsyn/files/gallery") }}',
             filebrowserImageUploadUrl: '{{ url("hudsyn/files/upload-image") }}?_token={{ csrf_token() }}',
+            on: {
+                instanceReady: function(evt) {
+                    var docHead = evt.editor.document.getHead();
+                    // Loop over any custom scripts defined in config and inject them
+                    var scripts = {!! json_encode(config('hudsyn.editor.scripts')) !!};
+                    scripts.forEach(function(src) {
+                        var script = evt.editor.document.createElement('script');
+                        script.setAttribute('type', 'text/javascript');
+                        script.setAttribute('src', src);
+                        docHead.append(script);
+                    });
+                }
+            }
         });
     </script>
 @endsection 

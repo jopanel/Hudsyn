@@ -48,7 +48,7 @@ Hudsyn is packaged as a Composer package for easy integration into your existing
 Run the following Composer command from your Laravel project root:
 
 ```bash
-composer require jopanel/hudsyn:^1.0.7
+composer require jopanel/hudsyn:^1.0.8
 ```
 
 ### Step 2: Publish the Package Assets
@@ -84,6 +84,10 @@ php artisan db:seed --class=AdminUserSeeder
 ### Step 5: Configure Middleware and Routes
 
 Hudsyn comes with its own routes and a custom middleware that protects the admin interface. The package’s service provider automatically registers these. Ensure your authentication is set up and that your custom middleware alias (`hudsyn`) is recognized if you need to customize it.
+
+### Step 6: Creating and Editing Pages/Blogs/Press Releases
+
+You can add your css and script files in `/config/hudsyn.php` which will be loaded within the WYSIWYG editor. Easily modify the header and footer file for your press release, blog, and pages within the `/resources/views/vendor/hudsyn/hudsyn/public/*` folder. For pages you can specify your own custom header and footer as well load them customized to your needs based on the layout view file.
 
 ## How Hudsyn Works
 
@@ -123,4 +127,3 @@ This project is open-sourced under the [MIT license](LICENSE).
 ---
 
 Happy coding and enjoy using Hudsyn in your Laravel projects!
-```
