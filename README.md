@@ -48,7 +48,7 @@ Hudsyn is packaged as a Composer package for easy integration into your existing
 Run the following Composer command from your Laravel project root:
 
 ```bash
-composer require jopanel/hudsyn:^1.0.8
+composer require jopanel/hudsyn:^1.0.9
 ```
 
 ### Step 2: Publish the Package Assets
